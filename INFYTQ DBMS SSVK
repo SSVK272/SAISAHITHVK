@@ -92,3 +92,16 @@ DAY5 EXCERISE 5
 SELECT SID,SNAME,LOCATION FROM SALESMAN WHERE SNAME LIKE '%e%' AND LOCATION LIKE '%o%' 
 UNION ALL
 SELECT SID,SNAME,LOCATION FROM SALESMAN WHERE SNAME LIKE '%a%' AND LOCATION LIKE '%a%'
+
+
+
+
+
+
+
+JOIN EXCERISE
+Use Inner Join and Self Join to display id, name, manager id, manager name of all employees who have been allocated computers. 
+Also display the make of the allocated computer.
+
+
+SELECT SELECT EMP.Id EMPID, EMP.EName EmpName, MGR.ID MgrId, MGR.EName MgrName, C.Make FROM Employee EMP INNER JOIN Employee MGR ON EMP.Manager = MGR.Id INNER JOIN Computer C ON C.CompId = EMP.CompId;EMP.Id EMPID, EMP.EName EmpName, MGR.ID MgrId, MGR.EName MgrName, C.Make FROM Employee EMP INNER JOIN Employee MGR ON EMP.Manager = MGR.Id INNER JOIN Computer C ON C.CompId = EMP.CompId;
