@@ -39,7 +39,7 @@ bill_amount=calculate_bill_amount("N",2,7)
 print(bill_amount)
 
 
-
+############################################################################################################################
 
 
 ASS 20:
@@ -120,6 +120,14 @@ def calculate_loan(account_number,salary,account_balance,loan_type,loan_amount_e
     #print("Requested EMI's:",customer_emi_expected)
 
     #Use the below given print statements to display the output, in case of invalid data.
+    
+    
+    
+    
+    
+    
+    
+    
     #print("Insufficient account balance")
     #print("The customer is not eligible for the loan")
     #print("Invalid account number")
@@ -128,3 +136,75 @@ def calculate_loan(account_number,salary,account_balance,loan_type,loan_amount_e
 
 
 calculate_loan(1001,40000,250000,"Car",300000,30)
+############################################################################################################################
+
+
+
+
+ASS 21 DAY 2
+
+
+
+
+#PF-Tryout
+
+def generate_next_date(day,month,year):
+    #Start writing your code here
+    next_day=0
+    next_month=0
+    next_year=0
+    if month==1 or month==3 or month==5 or month==7 or month==8 or month==10:
+        if day>0 and day<31:
+            next_day=day+1
+            next_month=month
+            next_year=year
+        else:
+            next_day==1
+            next_month=month+1
+            next_year=year
+            
+    elif month==2 and (year%400!=0):
+        if day>0 and day<=27:
+            next_day=day+1
+            next_month=month
+            next_year=year
+        else:
+            next_day==1
+            next_month=month+1
+            next_year=year
+    
+    elif month==2 and (year%400==0):
+        if day>0 and day<=28:
+            next_day=day+1
+            next_month=month
+            next_year=year
+        else:
+            next_day=1
+            next_month=month+1
+            next_year=year
+            
+    elif month==4 or month==6 or month==9 or month==11:
+        if day>0 and day<=29:
+            next_day=day+1
+            next_month=month
+            next_year=year
+        else:
+            next_day=1
+            next_month=month+1
+            next_year=year
+        
+    elif month==12:
+        if day>0 and day<31:
+            next_day=day+1
+            next_month=month
+            next_year=year
+        else:
+            next_day==1
+            next_month=1
+            next_year=year+1
+
+
+    print(next_day,"-",next_month,"-",next_year)
+
+
+generate_next_date(30,6,2015)
