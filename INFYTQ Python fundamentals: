@@ -226,3 +226,66 @@ for baggage_weight in 29, 30, 31, 32, 28:
 print("No. of passengers who cleared baggage check:", count)
 
 ###################################################################################################################################
+Assignment 28 level 2
+#PF-Assgn-28
+
+def find_max(num1, num2):
+    max_num=-1
+    list1=[]
+    #ans=0
+    answer=0
+    #sums=0
+    # Write your logic here
+    if num1<num2:
+        for i in range(num1,num2+1):
+            answer+=i
+            if (answer%3==0):
+                if (i%5==0) and (10<=i<=99):
+                    list1.append(i)
+                    max_num=max(list1)
+                else:
+                    max_num=-1
+            else:
+                max_num=-1
+                    
+    else:
+        max_num=-1
+
+                
+                    
+    return max_num
+
+#Provide different values for num1 and num2 and test your program.
+max_num=find_max(14,2)
+print(max_num)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
