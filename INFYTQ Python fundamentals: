@@ -304,7 +304,38 @@ print(list_of_leap_years)
 
 ######################################################################################################
 
+ASS 24 DAY3
 
+#PF-Assgn-24
+def form_triangle(num1,num2,num3):
+    #Do not change the messages provided below
+    success="Triangle can be formed"
+    failure="Triangle can't be formed"
+    
+    a=num1+num2
+    b=num1+num3
+    c=num2+num3
+    
+    if a!=num3 and a<num3 or b!=num2 and b<num2 or c!=num1 and c<num1:
+        print(success)
+    else:
+        print(failure)
+
+    #Write your logic here
+
+    #Use the following messages to return the result wherever necessary
+    # return success
+    # return failure
+
+#Provide different values for the variables, num1, num2, num3 and test your program
+num1=3
+num2=3
+num3=5
+form_triangle(num1, num2, num3)
+
+
+
+##############################################################################
 
 
 
