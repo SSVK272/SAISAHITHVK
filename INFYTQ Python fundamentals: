@@ -259,7 +259,17 @@ def find_max(num1, num2):
 max_num=find_max(14,2)
 print(max_num)
 
+############################################################################################################
 
+
+ASS 25 
+
+
+counter1=0
+counter2=5
+for i in range(counter1,counter2):
+  print('*'*counter2)
+  counter2-=1
 
 
 
