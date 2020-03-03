@@ -214,7 +214,19 @@ generate_next_date(30,6,2015)
 DAY 2 EXERCISE 17:
 
 count=0
-i=1
+i=1#PF-Assgn-22
+def find_leap_years(given_year):
+    list_of_leap_years=[]
+
+    # Write your logic here
+    for year in range(given_year,given_year+16):
+        if year%400==0 or year%4==0 and year%100!=0:
+            list_of_leap_years.append(year)
+
+    return list_of_leap_years
+
+list_of_leap_years=find_leap_years(2000)
+print(list_of_leap_years)
 for baggage_weight in 29, 30, 31, 32, 28:
     if(baggage_weight>=1 and baggage_weight <=30):
         print("Passenger",i,": Proceed for baggage check.")
@@ -262,7 +274,7 @@ print(max_num)
 ############################################################################################################
 
 
-ASS 25 
+ASS 25 day3
 
 
 counter1=0
@@ -271,7 +283,26 @@ for i in range(counter1,counter2):
   print('*'*counter2)
   counter2-=1
 
+###############################################################################################################
 
+ASS 22 day3
+
+#PF-Assgn-22
+def find_leap_years(given_year):
+    list_of_leap_years=[]
+
+    # Write your logic here
+    for year in range(given_year,given_year+16):
+        if year%400==0 or year%4==0 and year%100!=0:
+            list_of_leap_years.append(year)
+
+    return list_of_leap_years
+
+list_of_leap_years=find_leap_years(2000)
+print(list_of_leap_years)
+
+
+######################################################################################################
 
 
 
