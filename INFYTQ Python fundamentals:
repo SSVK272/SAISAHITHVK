@@ -415,7 +415,31 @@ print("The equivalent swedish words are:",swedish_words_list)
 
 
 
+day 4 assignment 29:
 
+#PF-Assgn-29
+def calculate(distance,no_of_passengers):
+    price_per_litre=70
+    ticket_per_person=80
+    millage=10
+    collection=0
+    fuel_cost=0
+    #Remove pass and write your logic here
+    collection=no_of_passengers*ticket_per_person
+    fuel_cost=(distance//millage)*price_per_litre
+    amt=collection-fuel_cost
+    if amt<collection:
+        return amt
+    else:
+        return -1
+        
+    
+
+
+#Provide different values for distance, no_of_passenger and test your program
+distance=20
+no_of_passengers=50
+print(calculate(distance,no_of_passengers))
 
 
 
