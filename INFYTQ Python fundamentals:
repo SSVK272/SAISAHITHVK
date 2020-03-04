@@ -428,7 +428,7 @@ def calculate(distance,no_of_passengers):
     collection=no_of_passengers*ticket_per_person
     fuel_cost=(distance//millage)*price_per_litre
     amt=collection-fuel_cost
-    if amt<collection:
+    if amt>0:
         return amt
     else:
         return -1
