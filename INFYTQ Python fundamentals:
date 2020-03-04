@@ -442,10 +442,25 @@ no_of_passengers=50
 print(calculate(distance,no_of_passengers))
 
 
+################################################################################################
 
+Assignment 31 
+#PF-Assgn-31
+def check_palindrome(word):
+    temp=word[::-1]
+    if temp==word:
+        return True
+    else:
+        return False
 
-
-
+status=check_palindrome("wow")
+if(status):
+    print("word is palindrome")
+else:
+    print("word is not palindrome")
+    
+    
+################################################################################################################
 
 
 
