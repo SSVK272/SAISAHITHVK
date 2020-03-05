@@ -1,0 +1,8 @@
+ASSIGNMENT 32
+DAY 32
+
+temp=[]
+z=''
+temp=patient_medical_speciality_list[1::2]
+z=max(temp)
+speciality=medical_speciality[z]
