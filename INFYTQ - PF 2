@@ -76,7 +76,36 @@ sorted_merged_list=sort_list(merged_list)
 print(sorted_merged_list)
 
 
+#######################################################################################################################
 
+day 5 ass 36:
+
+#PF-Assgn-36
+def create_largest_number(number_list):
+    con=''
+    temp=''
+    con1=''
+    temp1=''
+    for i in number_list:
+        con=con+str(i)
+    temp=int(con)
+    for j in number_list[::-1]:
+        con1=con1+str(j)
+    temp1=int(con1)
+    if temp<temp1:
+        return temp1
+    else:
+        return temp
+        
+        
+    
+
+number_list=[23,45,67]
+largest_number=create_largest_number(number_list)
+print(largest_number)
+
+
+##############################################################################################################################
 
 
 
