@@ -6,3 +6,44 @@ z=''
 temp=patient_medical_speciality_list[1::2]
 z=max(temp)
 speciality=medical_speciality[z]
+
+DAY 5
+
+coll Ass 26:
+
+#PF-Exer-26
+
+def factorial(number):
+    reverse=0
+    temp=0
+    si=1
+    if number!=0:
+        while(number>0):
+            rem=number%10
+            reverse=reverse*10+rem
+            number=number//10
+            si=1
+            for i in range(reverse):
+                si=si*reverse
+                reverse-=1
+            temp+=si
+        return temp
+    else:
+        temp=1
+        return temp
+    
+    
+
+
+def find_strong_numbers(num_list):
+    strong_num_list=[]
+    for i in num_list:
+        if factorial(i)==i:
+            strong_num_list.append(i)
+    return strong_num_list
+        
+
+
+num_list=[145,375,100,2,10]
+strong_num_list=find_strong_numbers(num_list)
+print(strong_num_list)
