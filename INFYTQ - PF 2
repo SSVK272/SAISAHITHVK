@@ -82,20 +82,18 @@ day 5 ass 36:
 
 #PF-Assgn-36
 def create_largest_number(number_list):
-    con=''
-    temp=''
-    con1=''
-    temp1=''
-    for i in number_list:
-        con=con+str(i)
-    temp=int(con)
-    for j in number_list[::-1]:
-        con1=con1+str(j)
-    temp1=int(con1)
-    if temp<temp1:
-        return temp1
-    else:
-        return temp
+    num=[]
+    num=number_list.sort()
+    res = ""
+    for num in number_list:
+        res = str(num) + res
+
+    return (int(res))
+        
+
+number_list=[87,66,11]
+largest_number=create_largest_number(number_list)
+print(largest_number)
         
         
     
