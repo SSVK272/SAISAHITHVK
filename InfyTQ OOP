@@ -1,0 +1,28 @@
+Day 2 :
+Exercise 6:
+#OOPR-Exer-6
+#Start writing your code here
+class Vehicle:
+    
+    def __init__(self):
+        self.mileage = 20
+        self.fuel_left = 12
+        self.reversed_fuel = 5
+        self.distance_travel = None
+        self.distance_covered = None
+        
+    def identify_distance_that_can_be_travelled(self):
+        if self.fuel_left > self.reversed_fuel:
+            self.distance_travel = self.mileage * (self.fuel_left - self.reversed_fuel)
+            return self.distance_travel
+        else:
+            return 0
+    
+    def identify_distance_travelled(self, initial_fuel):
+        if initial_fuel > self.fuel_left:
+            self.distance_covered = (initial_fuel - self.fuel_left) * self.mileage
+            return self.distance_covered
+        
+v1 = Vehicle()
+print(v1.identify_distance_that_can_be_travelled())
+print(v1.identify_distance_travelled(50))
