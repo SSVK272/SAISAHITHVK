@@ -26,3 +26,64 @@ class Vehicle:
 v1 = Vehicle()
 print(v1.identify_distance_that_can_be_travelled())
 print(v1.identify_distance_travelled(50))
+
+
+
+##################################################################################################################################
+
+Day 2 - Exercise 7 level 2
+
+class Ticket:
+
+    counter = 0
+    def __init__(self,passenger_name,source,destination):
+        self.__ticket_id = None
+        self.__passenger_name = passenger_name
+        self.__source = source
+        self.__destination = destination
+        Ticket.counter += 1
+
+    def validate_source_destination(self):
+        list = ['Mumbai', 'Chennai', 'Pune', 'Kolkata', 'MUMBAI', 'CHENNAI', 'PUNE', 'KOLKATA']
+        if self.__source == 'Delhi' or self.__source == 'DELHI' or self.__source == 'delhi':
+            if self.__destination in list:
+                return True
+            else:
+                return False
+
+        else:
+            return False
+
+    def generate_ticket(self):
+        if self.validate_source_destination() == True:
+            if Ticket.counter<10:
+                self.__ticket_id = self.__source[0:1] + self.__destination[0:1] + str(0) + str(Ticket.counter)
+            else:
+                self.__ticket_id = self.__source[0:1] + self.__destination[0:1] + str(Ticket.counter)
+        else:
+            self.__ticket_id = None
+            print(self.__ticket_id)
+
+    def get_ticket_id(self):
+        return self.__ticket_id
+
+    def get_passenger_name(self):
+        return self.__passenger_name
+
+    def get_source(self):
+        return self.__source
+
+    def get_destination(self):
+        return self.__destination
+
+
+t1 = Ticket('Sai', 'Delhi', 'Chennai')
+t1.generate_ticket()
+print(t1.get_ticket_id())
+print(t1.get_passenger_name())
+print(t1.get_source())
+print(t1.get_destination())
+t2 = Ticket('Sahith', 'Delhi', 'Mumbai')
+t2.generate_ticket()
+t3 = Ticket('VK' , 'Delhi', 'Pune')
+t3.generate_ticket()
