@@ -18,10 +18,10 @@ class Parrot:
     def get_color(self):
         return self.__color
 
-    def get_uinque_number(self):
+    def get_unique_number(self):
         return self.__unique_number
         
 p1 = Parrot("ram", "green")
 print(p1.get_name())
 print(p1.get_color())
-print(p1.get_uinque_number())
+print(p1.get_unique_number())
